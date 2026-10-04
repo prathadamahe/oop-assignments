@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+private:
+    int id;
+    string name;
+    float salary;
+
+public:
+    void setDetails(int i, string n, float s) {
+        id = i;
+        name = n;
+        salary = s;
+    }
+
+    void displayDetails() {
+        cout << "Employee ID : " << id << endl;
+        cout << "Name        : " << name << endl;
+        cout << "Salary      : " << salary << endl;
+    }
+};
+
+int main() {
+    Employee e;
+
+    e.setDetails(101, "Amit", 50000);
+    e.displayDetails();
+
+    return 0;
+}
