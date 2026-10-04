@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    int rollNo;
+    string name;
+    string course;
+
+public:
+    void setDetails(int r, string n, string c) {
+        rollNo = r;
+        name = n;
+        course = c;
+    }
+
+    void displayDetails() {
+        cout << "Roll No : " << rollNo << endl;
+        cout << "Name    : " << name << endl;
+        cout << "Course  : " << course << endl;
+    }
+};
+
+int main() {
+    Student s;
+
+    s.setDetails(101, "Rahul", "Computer Science");
+    s.displayDetails();
+
+    return 0;
+}
+
+
+
