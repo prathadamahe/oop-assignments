@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Data {
+private:
+    T value;
+
+public:
+    Data(T v) {
+        value = v;
+    }
+
+    void display() {
+        cout << "Value: " << value << endl;
+    }
+};
+
+int main() {
+    Data<int> d1(100);
+    Data<double> d2(25.75);
+    Data<string> d3("Hello C++");
+
+    d1.display();
+    d2.display();
+    d3.display();
+
+    return 0;
+}
