@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Book {
+private:
+    string title, author;
+    float price;
+
+public:
+    void setDetails(string t, string a, float p) {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void displayDetails() {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: " << price << endl;
+    }
+};
+
+int main() {
+    Book b;
+    b.setDetails("C++ Programming", "Bjarne Stroustrup", 599);
+    b.displayDetails();
+
+    return 0;
+}
