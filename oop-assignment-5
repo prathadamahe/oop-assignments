@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    int rollNo;
+    string name;
+    float marks;
+
+public:
+    Student(int rollNo, string name, float marks) {
+        this->rollNo = rollNo;
+        this->name = name;
+        this->marks = marks;
+    }
+
+    void display() {
+        cout << "Roll No : " << this->rollNo << endl;
+        cout << "Name    : " << this->name << endl;
+        cout << "Marks   : " << this->marks << endl;
+    }
+};
+
+int main() {
+    Student s(101, "Rohit", 89.5);
+
+    s.display();
+
+    return 0;
+}
