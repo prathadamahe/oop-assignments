@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+protected:
+    string brand;
+    int year;
+
+public:
+    void setVehicle(string b, int y) {
+        brand = b;
+        year = y;
+    }
+
+    void displayVehicle() {
+        cout << "Brand : " << brand << endl;
+        cout << "Year  : " << year << endl;
+    }
+};
+
+class Car : public Vehicle {
+private:
+    int seats;
+
+public:
+    void setCar(int s) {
+        seats = s;
+    }
+
+    void displayCar() {
+        displayVehicle();
+        cout << "Seats : " << seats << endl;
+    }
+};
+
+class Bike : public Vehicle {
+private:
+    int engineCC;
+
+public:
+    void setBike(int cc) {
+        engineCC = cc;
+    }
+
+    void displayBike() {
+        displayVehicle();
+        cout << "Engine : " << engineCC << " CC" << endl;
+    }
+};
+
+int main() {
+    Car c;
+    c.setVehicle("Toyota", 2025);
+    c.setCar(5);
+
+    cout << "Car Details:" << endl;
+    c.displayCar();
+
+    cout << endl;
+
+    Bike b;
+    b.setVehicle("Honda", 2024);
+    b.setBike(150);
+
+    cout << "Bike Details:" << endl;
+    b.displayBike();
+
+    return 0;
+}
